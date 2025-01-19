@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d3d1d41e;
+    color: #333;
+  }
+
+  header {
+    color: black;
+    text-align: center;
+
+  }
+
+  #org-name {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+
+  main {
+    width: auto;
+    padding: 20px;
+    font-style: normal;
+    position: relative;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  #motto  {
+    font-style: normal;
+    position: relative;
+    top: 20px;
+
+  }
+
+  footer {
+    background-color: #666464;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+  }
+
+  a {
+    color: #6200ea;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  /* Dropdown container */
+  .dropdown {
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    z-index: 20;
+  }
+
+  .dropdown button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    z-index: 2;
+  }
+
+  .dropdown button:hover {
+    background-color: #0056b3;
+  }
+
+  /* Dropdown content */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+    border-radius: 5px;
+    z-index: 1;
+    right: 555;
+    color: white;
+  }
+
+  .dropdown-content a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #333;
+  }
+
+  /* Show dropdown on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    .dropdown {
+      position: sticky;
+      top: 5%;
+      float: right;
+    }
+
+    header {
+      font-size: 1.2em;
+      margin: 0px;
+    }
+
+    main {
+      padding: 10px;
+    }
+
+    footer {
+      padding: 5px 0;
+    }
+  }

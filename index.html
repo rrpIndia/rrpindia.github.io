@@ -2,125 +2,15 @@
 <html lang="en">
 
 <head>
+  <link rel="stylesheet" href="homepage.css">
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Right to Recall Party</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #d3d1d41e;
-      color: #333;
-    }
-
-    header {
     
-      color: black;
-      padding: 1em 0;
-      text-align: center;
-    }
-
-    main {
-      padding: 20px;
-      position: relative;
-      left: 20px;
-      right: 20px;
-    }
-
-    footer {
-      background-color: #666464;
-      color: white;
-      text-align: center;
-      padding: 10px 0;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-
-    a {
-      color: #6200ea;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* Dropdown container */
-    .dropdown {
-      position: absolute;
-      top: 71px;
-      right: 20px;
-    }
-
-    .dropdown button {
-      background-color: #007BFF;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      cursor: pointer;
-      font-size: 16px;
-      border-radius: 5px;
-    }
-
-    .dropdown button:hover {
-      background-color: #0056b3;
-    }
-
-    /* Dropdown content */
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f1f1f1;
-      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-      padding: 10px 0;
-      border-radius: 5px;
-      z-index: 1;
-      right: 0;
-    }
-
-    .dropdown-content a {
-      color: black;
-      padding: 10px 20px;
-      text-decoration: none;
-      alll display: block;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #ddd;
-    }
-
-    /* Show dropdown on hover */
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 600px) {
-      .dropdown {
-        right: 10px;
-        top: 50px;
-      }
-
-      header {
-        font-size: 1.2em;
-      }
-
-      main {
-        padding: 10px;
-      }
-
-      footer {
-        padding: 15px 0;
-      }
-    }
-  </style>
 </head>
 
 <body>
   <header>
-    <h1>Right to Recall<br>Party</h1>
+    <h1 id="org-name">Right to Recall<br>Party</h1>
   </header>
 
   <div class="dropdown">
@@ -134,15 +24,16 @@
 
   <main>
     <p>
-      India lacks laws of Right To Recall, Jury System, Referendums, Direct & Multi-elections, the only ways to reduce
-      Poverty, Corruption, and Crimes. <br>
-      We aim to bring these very laws so that India’s problems can be vastly reduced
-    </p>
+      <em id="motto"> 
+        India lacks laws of <strong>Right To Recall, Jury System, Referendums, Direct & Multi-elections</strong>, the only ways to reduce
+        <strong>, Corruption, and Crimes</strong>. <br>
+        We aim to bring these very laws so that India<span>&#39;</span>s problems can be vastly reduced.
+      </em>
   </main>
 
   <footer>
-    <p>This website is not associated with Right to Recall party.</p>
-    <p>Right to Recall Party will not be responsible for anything.</p>
+    <p>This website is not associated with Right to Recall Party.<br>
+      RRP will not be responsible for anything.</p>
   </footer>
 </body>
 
