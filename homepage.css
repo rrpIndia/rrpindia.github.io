@@ -5,8 +5,10 @@ body {
     background-color: #d3d1d41e;
     color: #333;
   }
-
+   
   header {
+    display: grid;
+    grid-template-columns: auto;
     color: black;
     text-align: center;
 
