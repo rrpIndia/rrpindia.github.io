@@ -1,10 +1,5 @@
-a {
-    color: #6200ea;
-    display: block;
-    text-decoration: none;
-    margin-bottom: 2vh;
-}
-
-a:hover {
-    text-decoration: underline;
+/*this tops links.css reason not clear, perhaps main a*/
+main a {
+    font-weight: 100;
+    color: hsla(249, 62%, 29%, 0.993);
 }
