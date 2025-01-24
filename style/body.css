@@ -1,0 +1,11 @@
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    /* set the minimum height of style to full screen*/
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d3d1d41e;
+    color: #333;
+  }
