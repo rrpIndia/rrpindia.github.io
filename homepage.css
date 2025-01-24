@@ -63,6 +63,10 @@ header {
   }
 }
 
+a {
+  font-weight: bold;
+}
+
 main {
   font-style: normal;
   position: relative;
@@ -70,6 +74,10 @@ main {
   margin:  10px;
   max-width: 80ch;
 
+}
+
+p {
+  margin-bottom: 5vw;
 }
 
 #motto {
