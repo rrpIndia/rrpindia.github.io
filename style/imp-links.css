@@ -37,7 +37,7 @@ header {
     }
 
 @media screen and (max-width:
-    768px ) {  
+    400px ) {  
     .dropdown {
         position: relative;
         grid-column: 3 / 4;
