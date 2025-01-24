@@ -47,3 +47,19 @@
         border-radius: 5px;
         z-index: 2;
     }
+
+    .dropdown-content a {
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #333;
+      }
+      
+      /* Show dropdown on hover */
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }

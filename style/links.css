@@ -1,10 +1,10 @@
 a {
     color: #6200ea;
-    display: block;
     text-decoration: none;
-    margin-bottom: 2vh;
-}
-
-a:hover {
+    font-weight: bold;
+  }
+  
+  a:hover {
     text-decoration: underline;
-}
+  }
+  

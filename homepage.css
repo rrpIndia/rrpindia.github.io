@@ -1,6 +1,3 @@
-
-
-
 #motto {
   font-style: normal;
   position: relative;
@@ -9,32 +6,5 @@
 
 
 
-a {
-  color: #6200ea;
-  text-decoration: none;
-  font-weight: bold;
-}
 
-a:hover {
-  text-decoration: underline;
-}
 
-.dropdown button:hover {
-  background-color: #0056b3;
-}
-
-.dropdown-content a {
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {
-  background-color: #333;
-}
-
-/* Show dropdown on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
