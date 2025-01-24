@@ -1,19 +1,4 @@
-body {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
-    /* set the minimum height of style to full screen*/
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #d3d1d41e;
-    color: #333;
-}
-
-
-
-
-  a {
+a {
     color: #6200ea;
     display: block;
     text-decoration: none;
@@ -23,26 +8,3 @@ body {
 a:hover {
     text-decoration: underline;
 }
-
-.dropdown button:hover {
-    background-color: #0056b3;
-}
-
-.dropdown-content a {
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #333;
-}
-
-/* Show dropdown on hover */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-
-
