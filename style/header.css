@@ -1,0 +1,17 @@
+header {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 3fr 1fr;
+  
+    #org-name {
+      grid-column: 2 / 3;
+      margin-top: 1cap;
+      margin-bottom: 0;
+      padding: 0;
+  
+      display: flex;
+      font-size: clamp(15px, 10vw, 35px);
+      justify-content: center;
+      text-align: center;
+    }
+}
