@@ -76,15 +76,6 @@ header {
   }
 }
 
-main {
-  font-style: normal;
-  position: relative;
-  justify-self: center;
-  margin: 10px;
-  max-width: 80ch;
-
-}
-
 p {
   margin-bottom: 5vw;
 }

@@ -78,15 +78,6 @@ header {
     }
 }
 
-main {
-    font-style: normal;
-    position: relative;
-    justify-self: center;
-    margin: 10px;
-    max-width: 80ch;
-  
-  }
-
   a {
     color: #6200ea;
     display: block;
