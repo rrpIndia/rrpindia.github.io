@@ -64,12 +64,12 @@ header {
 }
 
 main {
-  width: auto;
-  padding: 20px;
   font-style: normal;
   position: relative;
-  margin-left: 10%;
-  margin-right: 10%;
+  justify-self: center;
+  margin:  10px;
+  max-width: 80ch;
+
 }
 
 #motto {
