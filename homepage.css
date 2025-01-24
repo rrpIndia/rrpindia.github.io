@@ -63,10 +63,6 @@ header {
   }
 }
 
-a {
-  font-weight: bold;
-}
-
 main {
   font-style: normal;
   position: relative;
@@ -96,6 +92,7 @@ footer {
 a {
   color: #6200ea;
   text-decoration: none;
+  font-weight: bold;
 }
 
 a:hover {
