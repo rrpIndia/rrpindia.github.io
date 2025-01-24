@@ -12,7 +12,8 @@ body {
 
 header {
     display: grid;
-    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 3fr 1fr;
 
     #org-name {
         grid-column: 2 / 3;
@@ -35,6 +36,20 @@ header {
         z-index: 20;
     }
 
+@media screen and (max-width:
+    768px ) {  
+    .dropdown {
+        position: relative;
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+        align-self: last baseline;
+        justify-self: center;
+        z-index: 20;   
+    }
+    
+}
+        
+
     .dropdown-content {
         display: none;
         position: absolute;
@@ -51,10 +66,10 @@ header {
     .dropdown button {
         background-color: #007bff;
         color: white;
-        padding-top: clamp(3px, 3vw, 10px);
-        padding-bottom: clamp(3px, 3vw, 10px);
-        padding-left: clamp(7px, 5vw, 25px);
-        padding-right: clamp(7px, 5vw, 25px);
+        padding-top: clamp(1px, 3vw, 10px);
+        padding-bottom: clamp(1px, 3vw, 10px);
+        padding-left: clamp(1px, 5vw, 25px);
+        padding-right: clamp(1px, 5vw, 25px);
         border: none;
         cursor: pointer;
         font-size: 16px;
