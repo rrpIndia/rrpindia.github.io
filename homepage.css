@@ -21,7 +21,7 @@ header {
     padding: 0;
 
     display: flex;
-    font-size: clamp(15px, 10vw, 30px);
+    font-size: clamp(15px, 10vw, 35px);
     justify-content: center;
     text-align: center;
   }
@@ -51,10 +51,10 @@ header {
   .dropdown button {
     background-color: #007bff;
     color: white;
-    padding-top: clamp(3px, 3vw, 15px);
-    padding-bottom: clamp(3px, 3vw, 15px);
-    padding-left: clamp(7px, 5vw, 30px);
-    padding-right: clamp(7px, 5vw, 30px);
+    padding-top: clamp(3px, 3vw, 10px);
+    padding-bottom: clamp(3px, 3vw, 10px);
+    padding-left: clamp(7px, 5vw, 25px);
+    padding-right: clamp(7px, 5vw, 25px);
     border: none;
     cursor: pointer;
     font-size: 16px;
