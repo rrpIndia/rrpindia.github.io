@@ -1,2 +1,1 @@
-- [ ] add evm demo
-- [ ] add sister sites
+this is a proof of concept website. anyone is free to copy anything from here. 
