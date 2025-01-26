@@ -1,2 +1,4 @@
 - [ ] add evm demo
 - [ ] add sister sites
+- [ ] add proper videos
+- [ ] add law drafts
