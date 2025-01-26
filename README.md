@@ -1,4 +1,6 @@
-- [ ] add evm demo
-- [ ] add sister sites
-- [ ] add proper videos
-- [ ] add law drafts
+# directory structure
+>directory `pages` contains all the html pages. \
+>directory `html` contains all page elements divided in parts \
+>directory `scripts` contains all client side scripts \
+>directory `style` contains all css pages \
+>directory `html` contains all page elemets 
