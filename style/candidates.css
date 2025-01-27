@@ -1,7 +1,20 @@
 table {
-    table-layout: fixed;.
-    border: 1;
-    background-color: green;
-    
+    table-layout: fixed;
+    text-align: start;
+}
 
+th:nth-child(1) {
+    text-align: start;
+    width: 10ch;
+    b;
+}
+
+th:nth-child(2) {
+    width:20ch;
+    text-align: start;
+}
+
+th:nth-child(3) {
+    text-align: start;
+    width: 20ch
 }
