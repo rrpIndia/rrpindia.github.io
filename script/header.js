@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('html/header.html') // Fetch the header HTML file
+    fetch('/html/header.html') // Fetch the header HTML file
       .then(response => {
         if (!response.ok) {
           throw new Error('Failed to load header');
