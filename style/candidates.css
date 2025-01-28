@@ -1,12 +1,20 @@
 table {
     table-layout: fixed;
-    text-align: start;
+    border: 3px solid rgb(196, 186, 186);
+    border-collapse: collapse;
+}
+
+th {
+    border: 1px solid black;
+}
+
+tr {
+    border: 1px solid rgb(218, 201, 201);
 }
 
 th:nth-child(1) {
     text-align: start;
     width: 10ch;
-    b;
 }
 
 th:nth-child(2) {
