@@ -1,4 +1,8 @@
 footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    justify-items: center;
     background-color: #666464;
     color: white;
     text-align: center;
@@ -12,4 +16,17 @@ footer p a {
     display: inline;
     font-size: 15px;
     font-weight: bolder;
+}
+
+#i1{
+    background-color: aqua;
+}
+
+#i2 {
+    background-color: green;
+}
+
+#i3 {
+    background-color: blue;
+    grid-column: 1 / 3;
 }
