@@ -1,3 +1,15 @@
 - [ ] add evm video 
 - [ ] add postcards
 - [ ] add videos explanation 
+- [ ] add evm vvpat page
+- [ ] text align start in main
+- [ ] menu button should jump as soon as it touches grid line borders
+- [ ] turn body into flex
+- [ ] create about us page
+- [ ] add 'donation' in 'about us' page
+- [ ] add contact us page
+- [] why wo do what we do how we do in homepage
+- [] previous election with resluts 'candidates' page
+- [] navigation method for user location in files
+- [] one page description adn a link to download page
+  
