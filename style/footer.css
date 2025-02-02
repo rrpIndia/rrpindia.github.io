@@ -1,15 +1,37 @@
 footer {
+    display: grid;
+
+    grid-template-areas:
+        "contact about"
+        "social join"
+        "disclaimer disclaimer";
+    justify-items: center;
     background-color: #666464;
-    color: white;
+
     text-align: center;
     margin-top: 100px;
     padding: 10px;
+
 }
 
 footer p a {
-    color: black;
+    color: rgb(252, 244, 244);
     text-decoration: none;
     display: inline;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: bolder;
+}
+
+footer>a {
+    color: black;
+    font-size: medium;
+    margin-bottom: 1ch;
+}
+
+
+.disclaimer {
+    justify-self: stretch;
+    grid-area: disclaimer;
+    color: white;
+    text-align: start;
 }
