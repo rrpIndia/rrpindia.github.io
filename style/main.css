@@ -1,7 +1,9 @@
 main {
-    font-style: normal;
-    position: relative;
-    justify-self: center;
-    margin: 5vw;
-    max-width: 80ch;
-  }
+  flex: 1;
+  text-align: start;
+  font-style: normal;
+  position: relative;
+  justify-self: center;
+  margin: 5vw;
+  max-width: 80ch;
+}

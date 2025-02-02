@@ -3,7 +3,7 @@
 - [ ] add videos explanation 
 - [ ] add evm vvpat page
 - [ ] text align start in main
-- [ ] menu button should jump as soon as it touches grid line borders
+- [x] menu button should jump as soon as it touches grid line borders
 - [x] turn body into flex
 - [ ] create about us page
 - [ ] add 'donation' in 'about us' page

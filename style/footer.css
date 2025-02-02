@@ -15,9 +15,10 @@ footer {
 }
 
 footer p a {
-    color: #fcf5f5;
+    color: rgb(252, 244, 244);
     text-decoration: none;
     display: inline;
+    font-size: 17px;
     font-weight: bolder;
 }
 
