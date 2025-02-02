@@ -24,12 +24,13 @@ footer p a {
 
 footer>a {
     color: black;
-    font-size: large;
+    font-size: medium;
     margin-bottom: 1ch;
 }
 
 
 .disclaimer {
+    justify-self: stretch;
     grid-area: disclaimer;
     color: white;
     text-align: start;
