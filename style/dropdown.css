@@ -1,5 +1,5 @@
     /*
-     Dropdown container 
+     Dropdown container
      a GRID item
      */
     .dropdown {
@@ -11,7 +11,7 @@
     }
 
 @media screen and (max-width:
-    400px ) {  
+    400px ) {
 
     .dropdown {
         position: relative;
@@ -20,9 +20,9 @@
         align-self: last baseline;
         justify-self: end;
         margin-right: 2vw;
-        z-index: 2;   
-    } 
-    
+        z-index: 2;
+    }
+
 
 }
     .dropdown-content {
@@ -39,12 +39,11 @@
     }
 
     .dropdown button {
-        background-color: #007bff;
-        color: white;
-        padding-top: clamp(1px, 3vw, 10px);
-        padding-bottom: clamp(1px, 3vw, 10px);
-        padding-left: clamp(1px, 5vw, 25px);
-        padding-right: clamp(1px, 5vw, 25px);
+        color: hsl(0, 0%, 0%);
+        padding-top: clamp(0, 3vw, 5px);
+        padding-bottom: clamp(0, 3vw, 5px);
+        padding-left: clamp(0, 5vw, 15px);
+        padding-right: clamp(0, 5vw, 15px);
         border: none;
         cursor: pointer;
         font-size: 16px;
@@ -62,7 +61,7 @@
     .dropdown-content a:hover {
         background-color: #333;
       }
-      
+
       /* Show dropdown on hover */
       .dropdown:hover .dropdown-content {
         display: block;
