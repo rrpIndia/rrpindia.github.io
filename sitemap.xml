@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+
+<url>
+  <loc>https://rrpindia.github.io/</loc>
+  <lastmod>2025-02-07T13:23:45+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://rrpindia.github.io/pages/drafts/main.html</loc>
+  <lastmod>2025-02-07T13:23:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rrpindia.github.io/pages/drafts/RHB.html</loc>
+  <lastmod>2025-02-07T13:23:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rrpindia.github.io/pages/drafts/right_to_choose_marriage_act.html</loc>
+  <lastmod>2025-02-07T13:23:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rrpindia.github.io/pages/drafts/gau_niti.html</loc>
+  <lastmod>2025-02-07T13:23:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rrpindia.github.io/pages/drafts/vote_wapasi_cm.html</loc>
+  <lastmod>2025-02-07T13:23:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
