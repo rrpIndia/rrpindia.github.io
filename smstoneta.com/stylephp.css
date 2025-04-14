@@ -1,0 +1,979 @@
+body
+{
+font-family: Times New Roman;
+background-color:#F0F8FF;
+}
+
+div.header
+{
+position:absolute;
+left:0%;
+top:0%;
+width:100%;
+height:auto;
+text-align:center;
+color:#EE82EE;
+background-color:#000000;
+}
+
+
+div.login_panel
+{
+position:absolute;
+left:0%;
+width:98%;
+top:180px;
+padding:1%;
+}
+.login_panel.login_panel_show_unregistered {
+  top: 150px;
+}
+td.wrap {
+    word-wrap: break-word;
+}
+
+td.nowrap
+{white-space: nowrap;}
+
+#customers
+{
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+width:100%;
+border-collapse:collapse;
+}
+#customers td, #customers th
+{
+font-size:1em;
+border:1px solid #98bf21;
+padding:3px 2px 2px 7px;
+}
+#customers th 
+{
+font-size:1.1em;
+text-align:left;
+padding-top:5px;
+padding-bottom:4px;
+background-color:#191970;
+color:#ffffff;
+}
+#customers tr.alt td, #customers tr.alt td 
+{
+color:#000000;
+background-color:#B0C4DE;
+}
+.login_panel.login_panel_urlcount {
+    top: 220px;
+}
+
+@media (max-width: 750px) {
+
+             h1.urlcount-h1 {
+  font-size: 27px;
+}
+               h1.urlcount-h2 {
+  font-size: 24px;
+}
+              .urlcount-info {
+                word-wrap: break-word;
+                 }
+                 .login_panel.login_panel_show_unregistered, .login_panel.login_panel_urlcount {
+  top: 191px;
+}
+		/* Force table to not be like tables anymore */
+		#customers table, #customers thead, #customers tbody, #customers th, 
+                #customers td, #customers tr, #customers2 table, #customers2 thead, #customers2 tbody, #customers2 th, 
+                #customers2 td, #customers2 tr {
+			display: block !important;
+		}
+
+		#customers table, #customers2 table{border:1px #98bf21 solid}
+		#customers tr:nth-child(even) td, #customers2 tr:nth-child(even) td{ background: #efefef }
+
+		/* Hide table headers (but not display: none;, for accessibility) */
+		#customers thead tr:first-child {
+			position: absolute;
+			top: -9999px;
+			left: -9999px;
+		}
+
+                 table#customers.showcodes tbody tr:first-child, 
+                 table#customers.tweetlist tbody tr:first-child
+                table#customers.issue-category  tbody tr:first-child,
+                 table#customers.spamurl tbody tr:first-child, table#customers.showurl tbody tr:first-child,
+                 table#customers.unregister_sms_opinion tbody tr:first-child, 
+                 table#customers.show tbody tr:first-child,
+                 table#customers.showbyvoter tbody tr:first-child,
+                 table#customers.show_unregistered tbody tr:first-child,
+                 table#customers.showurl_unregistered tbody tr:first-child, 
+                 table#customers.table1 tbody tr:first-child, table#customers.table2 tbody tr:first-child, 
+                  table#customers.table3 tbody tr:first-child,
+                  table#customers.sccode tbody tr:first-child  {
+                       position: absolute;
+                       top: -9999px;
+                       left: -9999px;
+                 }
+
+		#customers td  {
+			/* Behave  like a "row" */
+			border: none;
+			border-bottom: 1px solid #eee;
+			position: relative;
+			padding: 6px;
+			padding-left:50%;
+		
+			border-bottom: 2px rgba(255, 255, 255, 0.65) groove;
+			width: auto;
+			    min-height: 20px;
+			text-align: left;
+		
+			word-break: break-all;
+		}
+		#customers td:before {
+			/* Now like a table header */
+			position: absolute;
+			/* Top/left values mimic padding */
+			top: 0;
+			padding: 9px;
+			left: 0;
+			color: #191970;
+			/* background: grey; */
+			bottom: 0;
+			width: 45%;
+			/*white-space: nowrap; */
+			font-weight:bold;
+		
+			font-size: .8em;
+			text-transform: uppercase;
+		
+			word-break: break-all;
+			white-space: normal;
+		}
+
+		/*
+		Label the data
+		*/
+		#customers td:nth-of-type(1):before { content: "Voter ID"; }
+		#customers td:nth-of-type(2):before { content: "Date Time"; }
+		#customers td:nth-of-type(3):before { content: "Code"; }
+		#customers td:nth-of-type(4):before { content: "Name"; }
+		#customers td:nth-of-type(5):before { content: "State"; }
+		#customers td:nth-of-type(6):before { content: "District"; }
+		#customers td:nth-of-type(7):before { content: "Assembly"; }
+		
+		/*
+		Label the data tweetlist
+		*/
+		#customers.tweetlist td:nth-of-type(1):before { content: "Tweet Link"; }
+		#customers.tweetlist td:nth-of-type(2):before { content: "Tweet"; }
+		#customers.tweetlist td:nth-of-type(3):before { content: "Sender Profile"; }
+		#customers.tweetlist td:nth-of-type(4):before { content: "Sender Name"; }
+		#customers.tweetlist td:nth-of-type(5):before { content: "Time"; }
+		#customers.tweetlist td:nth-of-type(6):before { content: "Location"; }
+
+               /*
+		Label the data statetcpcount
+		*/
+		#customers.statetcpcount td:nth-of-type(1):before { content: "Voter ID"; }
+		#customers.statetcpcount td:nth-of-type(2):before { content: "Date Time"; }
+		#customers.statetcpcount td:nth-of-type(3):before { content: "Code"; }
+		#customers.statetcpcount td:nth-of-type(4):before { content: "State"; }
+		#customers.statetcpcount td:nth-of-type(5):before { content: "State TCP Support"; }
+		#customers.statetcpcount td:nth-of-type(6):before { content: "District"; }
+		#customers.statetcpcount td:nth-of-type(7):before { content: "District TCP Support"; }
+                #customers.statetcpcount td:nth-of-type(8):before { content: "Assembly"; }
+
+		/*Label the data issue-category
+		*/
+		#customers.issue-category td:nth-of-type(1):before { content: "Voter ID"; }
+		#customers.issue-category td:nth-of-type(2):before { content: "Date Time"; }
+		#customers.issue-category td:nth-of-type(3):before { content: "Code"; }
+		#customers.issue-category td:nth-of-type(4):before { content: "Name"; }
+		#customers.issue-category td:nth-of-type(5):before { content: "State"; }
+		#customers.issue-category td:nth-of-type(6):before { content: "District"; }
+		#customers.issue-category td:nth-of-type(7):before { content: "Assembly"; }
+		
+		
+
+		/*
+		Label the data showurl
+		*/
+		#customers.showurl td:nth-of-type(1):before { content: "Voter ID"; }
+		#customers.showurl td:nth-of-type(2):before { content: "Date Time"; }
+		#customers.showurl td:nth-of-type(3):before { content: "URL Code"; }
+		#customers.showurl td:nth-of-type(4):before { content: "Name"; }
+		#customers.showurl td:nth-of-type(5):before { content: "State"; }
+		#customers.showurl td:nth-of-type(6):before { content: "District"; }
+		#customers.showurl td:nth-of-type(7):before { content: "Assembly"; }
+
+
+
+
+		/*
+		Label the data  urlcount
+		*/
+		#customers.urlcount td:nth-of-type(1):before { content: "URL ID"; }
+		#customers.urlcount td:nth-of-type(2):before { content: "URL (fully seen if reg support>25)"; }
+		#customers.urlcount td:nth-of-type(3):before { content: "Support Numerical Code"; }
+		#customers.urlcount td:nth-of-type(4):before { content: "Reg Support Count"; }
+		#customers.urlcount td:nth-of-type(5):before { content: "Oppose Numerical Code"; }
+		#customers.urlcount td:nth-of-type(6):before { content: "Reg Oppose Count"; }
+		#customers.urlcount td:nth-of-type(7):before { content: "Spam Numerical Code"; }
+		#customers.urlcount td:nth-of-type(8):before { content: "Reg Spam Count"; }
+		#customers.urlcount td:nth-of-type(9):before { content: "UnSpam Numerical Code"; }
+		#customers.urlcount td:nth-of-type(10):before { content: "Reg UnSpam Count"; }
+		#customers.urlcount td:nth-of-type(11):before { content: "Cancel Numerical Code"; }
+
+
+		/*
+		Label the data  urlcount_unregistered
+		*/
+		#customers.urlcount_unregistered td:nth-of-type(1):before { content: "URL ID"; }
+		#customers.urlcount_unregistered td:nth-of-type(2):before { content: "URL (fully seen if reg support>25)"; }
+		#customers.urlcount_unregistered td:nth-of-type(3):before { content: "Support Numerical Code"; }
+		#customers.urlcount_unregistered td:nth-of-type(4):before { content: "UnReg Support Count"; }
+		#customers.urlcount_unregistered td:nth-of-type(5):before { content: "Oppose Numerical Code"; }
+		#customers.urlcount_unregistered td:nth-of-type(6):before { content: "UnReg Oppose Count"; }
+		#customers.urlcount_unregistered td:nth-of-type(7):before { content: "Cancel Numerical Code"; }
+	
+
+
+		/*
+		Label the data  showurl_unregistered
+		*/
+		#customers.showurl_unregistered td:nth-of-type(1):before { content: "Sender"; }
+		#customers.showurl_unregistered td:nth-of-type(2):before { content: "Date Time"; }
+		#customers.showurl_unregistered td:nth-of-type(3):before { content: "URL Code"; }
+
+		
+		/*
+		Label the data  unregister_sms_opinion
+		*/
+		#customers.unregister_sms_opinion td:nth-of-type(1):before { content: "Sender"; }
+		#customers.unregister_sms_opinion td:nth-of-type(2):before { content: "Date Time"; }
+		#customers.unregister_sms_opinion td:nth-of-type(3):before { content: "Code-sms"; }
+		
+		/*
+		Label the data  search.php
+		*/
+		
+		#customers.table1  td:nth-of-type(1):before { content: "sender"; }
+		#customers.table1  td:nth-of-type(2):before { content: "time"; }
+		#customers.table1  td:nth-of-type(3):before { content: "message"; }
+		
+		
+		#customers.table2  td:nth-of-type(1):before { content: "voter_id"; }
+		#customers.table2  td:nth-of-type(2):before { content: "sender"; }
+		#customers.table2  td:nth-of-type(3):before { content: "name"; }
+		#customers.table2  td:nth-of-type(4):before { content: "state"; }
+		#customers.table2  td:nth-of-type(5):before { content: "District"; }
+		#customers.table2  td:nth-of-type(6):before { content: "Assembly"; }
+	
+
+		#customers.table3  td:nth-of-type(1):before { content: "voter_id"; }
+		#customers.table3  td:nth-of-type(2):before { content: "sender"; }
+		#customers.table3  td:nth-of-type(3):before { content: "name"; }		
+		#customers.table3  td:nth-of-type(4):before { content: "state"; }
+		#customers.table3  td:nth-of-type(5):before { content: "District"; }
+		#customers.table3  td:nth-of-type(6):before { content: "Assembly"; }
+		#customers.table3  td:nth-of-type(7):before { content: "Address"; }
+		#customers.table3  td:nth-of-type(8):before { content: "Verifier Name"; }
+		
+		
+		/*
+		Label the data  show_unregistered
+		*/
+		#customers.show_unregistered td:nth-of-type(1):before { content: "Sender"; }
+		#customers.show_unregistered td:nth-of-type(2):before { content: "Date Time"; }
+		#customers.show_unregistered td:nth-of-type(3):before { content: "Code"; }
+
+
+		/*
+		Label the data  spamurl
+		*/
+		 
+		#customers.spamurl td:nth-of-type(1):before { content: "URL ID"; }
+		#customers.spamurl td:nth-of-type(2):before { content: "URL"; }
+		#customers.spamurl td:nth-of-type(3):before { content: "Created Date Time"; }
+		#customers.spamurl td:nth-of-type(4):before { content: "URL creator"; }
+		#customers.spamurl td:nth-of-type(5):before { content: "Reg Support Count"; }
+		#customers.spamurl td:nth-of-type(6):before { content: "Spam Count"; }
+		#customers.spamurl td:nth-of-type(7):before { content: "UnSpam Count"; }
+		#customers.spamurl td:nth-of-type(8):before { content: "Admin Comment"; }
+
+                /*
+		Label the data sccode
+		*/
+		#customers.sccode td:nth-of-type(1):before { content: "State Name"; }
+		#customers.sccode td:nth-of-type(2):before { content: "District"; }
+		#customers.sccode td:nth-of-type(3):before { content: "Assembly Constituency (AC)"; }
+		#customers.sccode td:nth-of-type(4):before { content: "5 Digit Assembly Code"; }
+		#customers.sccode td:nth-of-type(5):before { content: "Loksabha Seat"; }
+	
+	}	/***** End MAX 750 ***/
+        
+@media (max-width: 600px) {
+
+       .login_panel.login_panel_urlcount {
+                  top: 215px;
+               }
+       .login_panel.login_panel_showcodes , .login_panel.login_panel_tweetlist{
+            top: 195px;
+                }
+        .login_panel.login_panel_show_unregistered {
+           top: 201px;
+          }
+	body{
+		background-color:#fff; 
+	}
+
+
+	#customers.urlcount_unregistered td, #customers.urlcount td, #customers.search1 td{
+		min-height: 40px; line-height: 1.2em
+	}
+}
+
+@media (max-width: 480px) {
+      div.header h1 {
+        font-size: 25px;
+        line-height: 35px;
+        }
+   .login_panel.login_panel_urlcount {
+          top: 235px;
+               }
+   .login_panel.login_panel_showcodes , .login_panel.login_panel_tweetlist {
+         top: 175px;
+           }
+.login_panel.login_panel_show_unregistered {
+  top: 181px;
+   }
+#customers.showcodes td , #customers.tweetlist td{
+  padding-left: 45%;
+    }
+}
+
+/****************************** Showissue Main START ************************/
+
+/** search-category **/
+form.selectissue {
+  margin-top: 25px;
+}
+select#category {
+  font-size: 15px;
+}
+/** End search-category **/
+
+div.login_panel_regissue {
+  position: absolute;
+  left: 0%;
+  width: 96%;
+  top: 160px;
+  padding: 1% 1% 1% 1.5%
+}
+.registerissue {
+  margin-bottom: 330px;
+}
+a.home-internal-top {
+    margin-left: 5px;
+}
+h1.regissue-heading {
+  margin-left: -5px;
+  line-height: 35px;
+  font-size: 30px;
+}
+.regissue {
+  font-size: 18px;
+  margin-left: 10px;
+  line-height: 25px;
+}
+
+p.regissue-info {
+  margin-left: 5px;
+  font-size: 17px;
+  line-height: 22px;
+}
+a.skip2 {
+    content: "";
+    display: block;
+    height: 0px;
+    margin: -20px 0 0;
+}
+.regissue-data {
+  margin-left: 10px;
+  font-size:18px;
+  width: 94%;
+}
+h3.reg-paging {
+  font-size: 18px;
+  clear:both;
+  margin: 42px 0px 22px 0px;
+}
+.reg-title {
+  margin: 14px 0px 12px 0px;
+  font-size: 24px;
+  clear: both;
+}
+.reg-codes {
+  margin-bottom: 12px;
+  font-size: 19px;
+  white-space: nowrap;
+}
+.reg-supportcode {
+  margin-bottom: 7px;
+}
+.alpha-support {
+  float: left;
+  width: 48%;
+}
+.num-support {
+  text-align: right;
+}
+.reg-opposecode {
+  clear: both;
+}
+.alpha-oppose {
+  float: left;
+  width: 47.5%;
+}
+.num-oppose {
+  text-align: right;
+}
+.reg-desc {
+  margin-bottom: 15px;
+  line-height: 27px;
+  clear: both;
+  margin-top: 15px;
+}
+.reg-detail {
+  margin-bottom: 17px;
+  float: none;
+  width: 95%;
+}
+.reg-detail.search-detail {
+  margin-bottom: 50px;
+}
+.issue-link {
+  width: 48%;
+  float: left;
+}
+.reg-category {
+  text-align: right;
+}
+.reg-supportcount {
+  margin-bottom: 14px;
+  margin-top: 20px;
+  width: 95%;
+}
+.alpha-support2 {
+  float: left;
+  width: 65%;
+}
+.reg-supportnum {
+  text-align: right;
+}
+.reg-opposecount {
+  clear: both;
+  margin-bottom: 4px;
+  width: 95%;
+}
+.alpha-oppose2 {
+  float: left;
+  width: 65%;
+}
+.reg-opposenum {
+  text-align: right;
+}
+font.alpha-support3, font.alpha-oppose3, font.alpha-support4, 
+font.alpha-oppose4 {
+  white-space: nowrap;
+  font-size: 19px;
+}
+hr.divider2 {
+  float: left;
+}
+.back {
+  text-align: right;
+  float: right;
+  font-size: 18px;
+  padding-top: 20px;
+  position: relative;
+  bottom: 35px;
+}
+/**=================footer start===============***/ 
+.footer  {
+    background-color: #464646;
+    padding: 20px 15px 20px 17px;
+    color: #fff;
+    border-top: 8px solid #bfbfbf;
+	border-bottom: 8px solid #bfbfbf;
+	float: left;
+        position: absolute;
+    left: 0%;
+    bottom: 0%;
+    width: 97%;
+}
+.footer-social{
+   width:100%;
+   float:left;
+}
+.footer-text{
+   width:100%;
+   float:left;
+}
+a#licence1:link,         
+a#licence1:visited,
+a#licence2:link,         
+a#licence2:visited{
+  color:#f9ef04;
+  }
+  a#licence1:hover,       
+  a#licence1:active,
+  a#licence2:hover,       
+  a#licence2:active{
+  color: brown;
+  }
+ a#reference1:link,         
+a#reference1:visited,
+a#reference2:link,         
+a#reference2:visited{
+text-decoration: none;
+  color: #FFFFFF;
+  }
+  a#reference1:hover,       
+  a#reference1:active,
+  a#reference2:hover,       
+  a#reference2:active{
+  color: #9a9a9a;
+  }
+.mobile-display-block{
+display:none;
+}
+.mobile-view-display  {
+display:none;
+}
+.head-down{
+pointer-events:none;
+   cursor: default;
+}
+/**=================footer end===============***/ 
+
+/****************************** Showissue Main END ************************/
+
+/****************************** Showissue 738-790 START ************************/
+
+@media screen and (max-width: 790px) and (min-width: 738px) {
+
+.registerissue {
+    margin-bottom: 370px;
+}
+}/****************************** Showissue 738-790 END ************************/
+
+/****************************** Showissue MAX 766 START ************************/
+@media screen and (max-width: 766px){
+
+/** search-category MAX 766 **/
+
+select#category {
+    margin-bottom: 5px;
+}
+/** End search-category MAX 766 **/
+
+.header {
+    height: auto !important;
+    margin: auto 0;
+    font-size: 16px;
+}
+.registerissue {
+  margin-bottom: 160px;
+}
+p.reg-info {
+  font-size: 17px;
+}
+h3.reg-paging {
+  font-size: 17px;
+  margin-bottom: 20px;
+  line-height: 40px;
+}
+h3.reg-paging a {
+    padding: 0px 10px 0px 16px !important;
+    white-space:nowrap;
+}
+.reg-codes {
+  margin-bottom: 45px;
+  white-space: normal;
+}
+.reg-supportcode {
+  margin-bottom: 21px;
+}
+.alpha-support {
+  float: none;
+  margin-bottom: 5px;
+}
+font.alpha-support3, font.alpha-support4, font.alpha-oppose3, font.alpha-oppose4 {
+  white-space: nowrap;
+}
+.num-support {
+  text-align: left;
+}
+.alpha-oppose {
+  float: none;
+  margin-bottom: 5px;
+}
+.num-oppose {
+  float: left;
+}
+.issue-link {
+  width: 90.5%;
+  float: none;
+  margin-bottom: 5px;
+}
+.reg-category {
+  text-align: left;
+}
+.alpha-support2 {
+  float: none;
+  width: 95%;
+  margin-bottom: 5px;
+}
+.reg-supportnum {
+  text-align: left;
+}
+.reg-opposecount {
+  margin-bottom: 5px;
+}
+.alpha-oppose2 {
+  float: none;
+  width: 95%;
+  margin-bottom: 5px;
+}
+.reg-opposenum {
+  text-align: left;
+}
+.divider2 {
+  width: 90%;
+}
+.back {
+    text-align: right;
+    float: right;
+    font-size: 18px;
+    padding-top: 25px;
+    position: relative;
+    bottom: 30px;
+}
+
+.footer{
+display:none;
+}
+.mobile-view-display  {
+    background-color: #464646;
+    padding: 20px 0px;
+    color: #fff;
+	display:block;
+    border-top: 8px solid #bfbfbf;
+	border-bottom: 8px solid #bfbfbf;
+	float: left;
+	width:100%;
+}
+ul.mobile-footer {
+    padding: 10px;
+	list-style:none;
+}
+.mobile-footer li {
+    width: 33%;
+    float: left;
+    text-align: center;
+}
+/**********Mobile Footer**********************/
+
+a.footer-mobile-text:link,      
+a.footer-mobile-text:visited {
+text-decoration: none;
+  color: #FFFFFF;
+  }
+  a.footer-mobile-text:hover,    
+  a.footer-mobile-text:active {
+  color: #9a9a9a;
+  }
+  /*********Mobile Footer end***************/
+}/****************************** Showissue MAX 766 END ************************/
+
+
+/****************************** Showissue 242-566 START ************************/
+
+@media screen and (max-width: 566px) and (min-width: 242px){
+/** search-category 242-566 **/
+select#category {
+    width: 60%;
+}
+h3.search-results {
+    font-size: 19px;
+}
+.default {
+    font-size: 18px;
+    line-height: 31px;
+}
+/** End search-category 242-566 **/
+
+h1.regissue-heading {
+  font-size: 23px;
+  margin-left:2px;
+}
+a.skip2 {
+    content: "";
+    display: block;
+    height: 0px;
+    margin: -15px 0 0;
+}
+.registerissue {
+  margin-bottom: 160px;
+  padding-right: 5px;
+}
+.regissue-data {
+  margin-left: 10px;
+  font-size: 19px;
+  width: 95%;
+}
+.reg-title {
+  margin: 14px 0px 12px 0px;
+  font-size: 24px;
+}
+.alpha-support, .alpha-oppose {
+  width: 75%;
+  line-height: 27px;
+}
+.reg-desc {
+  word-break: break-word;
+  text-align: justify;
+  line-height: 28px;
+}
+.issue-link {
+  width: 100%;
+}
+/**** Footer 242-566 ***/
+.footer{
+display:none;
+}
+.mobile-view-display  {
+    padding: 20px 0px;
+	display:block;
+}
+ul.mobile-footer {
+    padding: 10px;
+	list-style:none;
+}
+.mobile-footer li {
+    width: 33%;
+    float: left;
+    text-align: center;
+}
+
+}/****************************** Showissue 242-566 END ************************/
+
+/****** Profile.php ***/
+
+.profile div.profilein {
+    width: 48%;
+    float: left;
+	 margin-right: 18px;
+	 margin-bottom: 18px;
+         line-height: 25px;
+}
+div#profilein1, div#profilein2 {
+  margin-bottom: 10px;
+}
+.mobile-text {
+  font-size: 17px;
+}
+.profile div.profilein  input
+{
+    float: left;
+    width: 73%;
+       padding: 6px 0px 6px 8px;
+    margin: 0px 0px 0px 12px;
+	}
+.profile div.profilein  span{
+       float: left;
+	   width:24%;
+	   margin-top: 5px;
+}	
+#form1{margin:0 auto;
+   width:90%;
+}
+.upload{
+       width: 80%;
+}
+.by-click{
+ width: 100%;
+}
+.submit-form{
+       float: left;
+    width: 100%;
+    text-align: center;
+     margin: 10px auto;
+}
+.submit-form input{
+        width: 17%;
+}
+@media (min-width:240px) and (max-width:565px){ 
+
+h2.profile-h {
+  margin-top: -15px;
+}
+p.compulsory {
+  font-size: 17px;
+}
+.profile-inner{ 
+         float: left;
+    width: 100%;
+}
+.mobile-text, .profile div.profilein span {
+   
+    width: 100%;
+    font-size:18px;
+}
+.profile div.profilein {
+    
+    width: 43%;
+}
+.profile div.profilein input {
+    margin: 0;
+    width: 84%;
+}
+.upload, .alternate {
+  font-size: 18px;
+  line-height: 29px;
+}
+input#fakeBrowse {
+  font-size: 17px;
+  margin-top: 10px
+}
+ol.profile-docs {
+  width: 100%;
+}
+li.profile-doc1 {
+  margin-bottom: 5px;
+}
+.by-click{
+font-size:18px;
+ line-height: 29px;
+ }
+input#file1 {
+    width: 115%;
+    font-size: 15px;
+}
+ input#checkbox {
+  width: 16px;
+  height: 16px;
+}
+ .submit-form input {
+  width: 33%;
+  font-size: 18px;
+}
+}
+@media (min-width:566px) and (max-width:1025px){ 
+.profile-inner{ 
+         float: left;
+    width: 100%;
+}
+.profile div.profilein span {
+   
+    width: 100%;
+}
+.profile div.profilein {
+    
+    width: 43%;
+}
+.profile div.profilein input {
+    margin: 0;
+    width: 84%;
+}
+}
+/****** Profile.php end***/
+
+/****** PUBLIC SMS ORDER start***/
+
+.home-internal-top-location {
+  margin-left: 3px;
+  word-spacing: 4px;
+}
+.skip {
+  margin: 5px;
+}
+a.skip3 {
+  content: "";
+  display: block;
+  height: 10px;
+  margin: -20px 0 0;
+}
+h2.location-h {
+  font-size: 29px;
+}
+.location-a {
+  font-size: 19px;
+  line-height : 32px;
+}
+p.location-p {
+  font-size: 18px;
+  line-height: 27px;
+  color: brown;
+  margin-bottom: 10px;
+  margin-left: 4px;
+  text-align: justify;
+}
+select#All_subject_issue_dropdown {
+  width: 90%;
+}
+
+select#state,  select#All_Districts_dropdown, select#All_Districts_dropdown, 
+select#All_Assemblies_dropdown, select#All_Categories_dropdown, select#All_subject_issue_dropdown {
+  font-size: 17px;
+  margin-bottom: 15px;
+}
+input.submit-location {
+  margin-right: 15px;
+  font-size: 15px;
+}
+input.search-voterid {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+/****** PUBLIC SMS ORDER end***/
+
+/****** PUBLIC SMS ORDER 242-566 start***/
+
+@media screen and (max-width: 566px) and (min-width: 242px) {
+
+
+.home-internal-top-location {
+  margin-top: 45px;
+  margin-bottom: -30px;
+}
+p.location-p {
+  line-height: 25px;
+}
+h2.location-h {
+  margin: 5px;
+}
+select#state,  select#All_Districts_dropdown, select#All_Districts_dropdown, 
+select#All_Assemblies_dropdown, select#All_Categories_dropdown, select#All_subject_issue_dropdown {
+  font-size: 19px;
+  margin-bottom: 15px;
+}
+select#All_Categories_dropdown {
+  width: 90%;
+}
+a.skip3 {
+  content: "";
+  display: block;
+  height: 30px;
+  margin: -54px 0 0;
+}
+font.alpha-support3, font.alpha-oppose3, font.alpha-support4, font.alpha-oppose4 {
+   font-size: 17px;
+}
+input.search-voterid {
+  margin-bottom: 10px;
+  width: 90%;
+}
+}
+/****** PUBLIC SMS ORDER 242-566 end***/

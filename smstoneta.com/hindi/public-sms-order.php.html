@@ -1,0 +1,400 @@
+<html>
+
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
+<meta http-equiv="content-language" content="en-GB" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title> smstoneta.com अपने राज्य, जिले या विधानसभा क्षेत्र में विषय की राय की संख्या देखें</title>
+
+<title> smstoneta.com hindi अपने राज्य, जिले या विधानसभा क्षेत्र में विषय की राय की संख्या देखें</title>
+
+<meta name="keywords"content="राज्य, जिले या विधानसभा क्षेत्र में विषय की राय की संख्या, स्थान अनुसार सर्च">
+<meta name="description"content="sms to neta अपने राज्य, जिले या विधानसभा क्षेत्र में विषय की राय की संख्या देखें smstoneta.com/hindi website">
+<meta name="author"content="Rajneesh Dwivedi">
+
+<script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+
+<link href="stylephp.css" rel="stylesheet" type="text/css" />
+
+<style>
+@media screen and (max-width: 766px){
+  .home-internal-top-location {
+  display: none;
+}
+}
+</style>
+<script language="javascript"> 
+function toggle() {
+	var ele = document.getElementById("foo");
+	var text = document.getElementById("displayText");
+	if(ele.style.display == "block") {
+    		ele.style.display = "none";
+		text.innerHTML = "अधिक देखें...";
+  	}
+	else {
+		ele.style.display = "block";
+		text.innerHTML = "कम देखें";
+	}
+} 
+</script>
+
+</head>
+
+<body bgcolor=AliceBlue>
+
+<div class="header">
+<h1>smstoneta.com</h1>
+<h1>अपने राज्य, जिले या विधानसभा क्षेत्र में विषय राय संख्या देखें</h1>
+</div>
+
+<div class="login_panel_regissue">
+<div class="registerissue">
+
+<a class="home-internal-top-location" href="index.php.html">वापस होम पेज जायें</a>
+
+<div class="registerissue">
+
+
+<h2 style="margin-top:1.5em;">अपने राज्य, जिले या विधानसभा क्षेत्र में विषय की राय की संख्या देखें  </h2>
+
+<p class="location-p">सबसे पहले, पहले ड्रॉप-डाउन बोक्स में से राज्य चुनें |
+</p>
+
+<p class="location-p">दूसरे और तीसरे ड्रॉप-डाउन बोक्स में पूर्व-निर्धारित मूल्य `सभी जिले` और `सभी विधानसभा` क्षेत्र` है | &nbsp; <a style="text-decoration: none;" id="displayText" href="javascript:toggle();">अधिक देखें...</a></p>
+<span class="more-one" id="foo" style="display:none;">
+<p class="location-p">सबमिट` क्लिक करने पर सभी जिलों और विधान सभा क्षेत्रों के परिणाम दिखेंगे आपके चुने हुए राज्य के लिए | यदि आप चाहें, तो अपना इच्छित जिला और विधान सभा क्षेत्र चुन सकते और उसी अनुसार परिणाम प्राप्त कर 
+सकते हैं | </p> 
+
+<p class="location-p">चौथे और पांचवे ड्रॉप-दोउन बोक्स में से, अपना इच्छित श्रेणी और विषय चुनें और `सबमिट` पर क्लिक करें और अपने चुने हुए क्षेत्र के 
+लिए एस.एम.एस.-राय की संख्या परिणाम देखें | या आप पूर्व निर्धारित `All Categories` (सभी श्रेणी) 
+और `All Subject issue` (सभी विषय) रहने दे सकते हैं अपने चुने हुए स्थान के लिए सभी श्रेणी और सभी विषयों के लिए 
+परिणाम देखने के लिए |  
+
+&nbsp; <a style="text-decoration: none;" id="displayText" href="javascript:toggle();">कम देखें...</a></p></span><br><br>
+<script>
+	
+function selectassembly(state_id)
+{
+	if(state_id!='-1')
+	{
+		loadData('All_Districts',state_id);
+		$("#All_Assemblies_dropdown").html("<option value='-1'>All_Assemblies</option>");
+							
+	}
+	else
+	{
+		alert("पहले राज्य चुनें");
+		$("#Select_State_First_dropdown").html("<option value='-1'>All_Districts</option>");
+		$("#All_Assemblies_dropdown").html("<option value='-1'>All_Assemblies</option>");		
+	}
+}
+
+function selectdistrict(district_id)
+{
+	if(document.getElementById("state").value==-1)
+	{
+		alert("पहले राज्य चुनें");
+		
+	}
+	else
+	{
+	if(district_id!="-1")
+	{
+		loadData('All_Assemblies',district_id);
+	}
+	else
+	{
+		$("#All_Assemblies_dropdown").html("<option value='-1'>All_Assemblies</option>");		
+	}
+	}
+}
+function selectass()
+{
+
+	if(document.getElementById("state").value==-1)
+	{
+		alert("पहले राज्य चुनें");
+		
+	}
+}
+
+
+
+function selectsubject(catagary_name)
+{
+	
+	if(document.getElementById("state").value==-1)
+	{
+		alert("पहले राज्य चुनें");
+	
+	}
+	else
+	{
+	if(catagary_name!="-1")
+	{
+
+		loadData('All_subject_issue',catagary_name);
+	}
+	else
+	{
+		$("#All_subject_issue_dropdown").html("<option value='-1'>सभी मुद्दे (विषय)</option>");		
+	}
+	}
+}
+
+
+function loadData(loadType,loadId)
+{	
+	
+	var dataString = 'loadType='+ loadType +'&loadId='+ loadId;
+	$("#"+loadType+"_loader").show();
+   $("#"+loadType+"_loader").fadeIn(400).html('कृपया प्रतीक्षा करें... <img src="inc/images/loading.gif" />');
+	$.ajax({
+		type: "POST",
+		url: "inc/loadData.php",
+		data: dataString,
+		cache: false,
+		timeout: 2000,
+		success: function(result)
+		{
+			$("#"+loadType+"_loader").hide();
+			$("#"+loadType+"_dropdown").html("<option value='-1'>"+loadType+"</option>");  
+			$("#"+loadType+"_dropdown").append(result);  
+			
+		}
+	});
+}
+
+
+
+</script>
+
+
+
+<form class="location" action="public-sms-order.php.html" method="POST">	
+    		
+				<div class="select-table">
+					<div class="select-state">
+						
+							<font color="red">*</font><select onchange="selectassembly(this.options[this.selectedIndex].value)" name="state" id="state">
+								<option value="-1">पहले राज्य चुनें</option>
+								<option <br />
+<b>Warning</b>:  Undefined array key "state" in <b>/home1/smstonet/public_html/hindi/public-sms-order.php</b> on line <b>218</b><br />
+value="Andaman and Nicobar">Andaman and Nicobar</option><option <br />
+<b>Warning</b>:  Undefined array key "state" in <b>/home1/smstonet/public_html/hindi/public-sms-order.php</b> on line <b>218</b><br />
+value="Andhra Pradesh">Andhra Pradesh</option><option <br />
+<b>Warning</b>:  Undefined array key "state" in <b>/home1/smstonet/public_html/hindi/public-sms-order.php</b> on line <b>218</b><br />
+value="Arunachal Pradesh">Arunachal Pradesh</option><option <br />
+<b>Warning</b>:  Undefined array key "state" in <b>/home1/smstonet/public_html/hindi/public-sms-order.php</b> on line <b>218</b><br />
+value="Assam">Assam</option><option <br />
+<b>Warning</b>:  Undefined array key "state" in <b>/home1/smstonet/public_html/hindi/public-sms-order.php</b> on line <b>218</b><br />
+value="Bihar">Bihar</option><option <br />
+<b>Warning</b>:  Undefined array key "state" in <b>/home1/smstonet/public_html/hindi/public-sms-order.php</b> on line <b>218</b><br />
+value="Chandigarh">Chandigarh</option><option <br />
+<b>Warning</b>:  Undefined array key "state" in <b>/home1/smstonet/public_html/hindi/public-sms-order.php</b> on line <b>218</b><br />
+value="Chhatisgarh">Chhatisgarh</option><option <br />
+<b>Warning</b>:  Undefined array key "state" in <b>/home1/smstonet/public_html/hindi/public-sms-order.php</b> on line <b>218</b><br />
+value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option><option <br />
+<b>Warning</b>:  Undefined array key "state" in <b>/home1/smstonet/public_html/hindi/public-sms-order.php</b> on line <b>218</b><br />
+value="Daman and Diu">Daman and Diu</option><option <br />
+<b>Warning</b>:  Undefined array key "state" in <b>/home1/smstonet/public_html/hindi/public-sms-order.php</b> on line <b>218</b><br />
+value="Delhi">Delhi</option><option <br />
+<b>Warning</b>:  Undefined array key "state" in <b>/home1/smstonet/public_html/hindi/public-sms-order.php</b> on line <b>218</b><br />
+value="Goa">Goa</option><option <br />
+<b>Warning</b>:  Undefined array key "state" in <b>/home1/smstonet/public_html/hindi/public-sms-order.php</b> on line <b>218</b><br />
+value="Gujarat">Gujarat</option><option <br />
+<b>Warning</b>:  Undefined array key "state" in <b>/home1/smstonet/public_html/hindi/public-sms-order.php</b> on line <b>218</b><br />
+value="Haryana">Haryana</option><option <br />
+<b>Warning</b>:  Undefined array key "state" in <b>/home1/smstonet/public_html/hindi/public-sms-order.php</b> on line <b>218</b><br />
+value="Himachal Pradesh">Himachal Pradesh</option><option <br />
+<b>Warning</b>:  Undefined array key "state" in <b>/home1/smstonet/public_html/hindi/public-sms-order.php</b> on line <b>218</b><br />
+value="Jammu and Kashmir">Jammu and Kashmir</option><option <br />
+<b>Warning</b>:  Undefined array key "state" in <b>/home1/smstonet/public_html/hindi/public-sms-order.php</b> on line <b>218</b><br />
+value="Jharkhand">Jharkhand</option><option <br />
+<b>Warning</b>:  Undefined array key "state" in <b>/home1/smstonet/public_html/hindi/public-sms-order.php</b> on line <b>218</b><br />
+value="Karnataka">Karnataka</option><option <br />
+<b>Warning</b>:  Undefined array key "state" in <b>/home1/smstonet/public_html/hindi/public-sms-order.php</b> on line <b>218</b><br />
+value="Kerala">Kerala</option><option <br />
+<b>Warning</b>:  Undefined array key "state" in <b>/home1/smstonet/public_html/hindi/public-sms-order.php</b> on line <b>218</b><br />
+value="Lakshadweep">Lakshadweep</option><option <br />
+<b>Warning</b>:  Undefined array key "state" in <b>/home1/smstonet/public_html/hindi/public-sms-order.php</b> on line <b>218</b><br />
+value="Madhya Pradesh">Madhya Pradesh</option><option <br />
+<b>Warning</b>:  Undefined array key "state" in <b>/home1/smstonet/public_html/hindi/public-sms-order.php</b> on line <b>218</b><br />
+value="Maharashtra">Maharashtra</option><option <br />
+<b>Warning</b>:  Undefined array key "state" in <b>/home1/smstonet/public_html/hindi/public-sms-order.php</b> on line <b>218</b><br />
+value="Manipur">Manipur</option><option <br />
+<b>Warning</b>:  Undefined array key "state" in <b>/home1/smstonet/public_html/hindi/public-sms-order.php</b> on line <b>218</b><br />
+value="Meghalaya">Meghalaya</option><option <br />
+<b>Warning</b>:  Undefined array key "state" in <b>/home1/smstonet/public_html/hindi/public-sms-order.php</b> on line <b>218</b><br />
+value="Mizoram">Mizoram</option><option <br />
+<b>Warning</b>:  Undefined array key "state" in <b>/home1/smstonet/public_html/hindi/public-sms-order.php</b> on line <b>218</b><br />
+value="Nagaland">Nagaland</option><option <br />
+<b>Warning</b>:  Undefined array key "state" in <b>/home1/smstonet/public_html/hindi/public-sms-order.php</b> on line <b>218</b><br />
+value="Odisha">Odisha</option><option <br />
+<b>Warning</b>:  Undefined array key "state" in <b>/home1/smstonet/public_html/hindi/public-sms-order.php</b> on line <b>218</b><br />
+value="Puducherry">Puducherry</option><option <br />
+<b>Warning</b>:  Undefined array key "state" in <b>/home1/smstonet/public_html/hindi/public-sms-order.php</b> on line <b>218</b><br />
+value="Punjab">Punjab</option><option <br />
+<b>Warning</b>:  Undefined array key "state" in <b>/home1/smstonet/public_html/hindi/public-sms-order.php</b> on line <b>218</b><br />
+value="Rajasthan">Rajasthan</option><option <br />
+<b>Warning</b>:  Undefined array key "state" in <b>/home1/smstonet/public_html/hindi/public-sms-order.php</b> on line <b>218</b><br />
+value="Sikkim">Sikkim</option><option <br />
+<b>Warning</b>:  Undefined array key "state" in <b>/home1/smstonet/public_html/hindi/public-sms-order.php</b> on line <b>218</b><br />
+value="Tamil Nadu">Tamil Nadu</option><option <br />
+<b>Warning</b>:  Undefined array key "state" in <b>/home1/smstonet/public_html/hindi/public-sms-order.php</b> on line <b>218</b><br />
+value="Telangana">Telangana</option><option <br />
+<b>Warning</b>:  Undefined array key "state" in <b>/home1/smstonet/public_html/hindi/public-sms-order.php</b> on line <b>218</b><br />
+value="Tripura">Tripura</option><option <br />
+<b>Warning</b>:  Undefined array key "state" in <b>/home1/smstonet/public_html/hindi/public-sms-order.php</b> on line <b>218</b><br />
+value="Uttar Pradesh">Uttar Pradesh</option><option <br />
+<b>Warning</b>:  Undefined array key "state" in <b>/home1/smstonet/public_html/hindi/public-sms-order.php</b> on line <b>218</b><br />
+value="Uttarakhand">Uttarakhand</option><option <br />
+<b>Warning</b>:  Undefined array key "state" in <b>/home1/smstonet/public_html/hindi/public-sms-order.php</b> on line <b>218</b><br />
+value="West Bengal">West Bengal</option>							</select>
+						
+					</div>
+					<div class="select-district">
+						
+															<select id="All_Districts_dropdown" onchange="selectdistrict(this.options[this.selectedIndex].value)" name="district">
+								<option value='-1'>सभी जिले</option>	
+								</select>
+														
+						<span id="All_Districts_loader"></span>	
+						
+					</div>
+					
+					<div class="select-assembly">
+						
+								
+						
+									<select id="All_Assemblies_dropdown"  onchange="selectcategory(this.options[this.selectedIndex].value)" name="assembly">
+									<option value="-1">सभी विधानसभा</option>
+									</select>
+															
+						<span id="All_Assemblies_loader"></span>	
+					</div>
+					
+					
+					
+					<div class="select-category">
+						
+							<select id="All_Categories_dropdown" onchange="selectsubject(this.options[this.selectedIndex].value)" name="catagery">
+								<option value="-1">सभी श्रेणियाँ</option>
+								<option <br />
+<b>Warning</b>:  Undefined array key "catagery" in <b>/home1/smstonet/public_html/hindi/public-sms-order.php</b> on line <b>313</b><br />
+value="Other">अन्य</option><option <br />
+<b>Warning</b>:  Undefined array key "catagery" in <b>/home1/smstonet/public_html/hindi/public-sms-order.php</b> on line <b>313</b><br />
+value="Tax">टैक्स</option><option <br />
+<b>Warning</b>:  Undefined array key "catagery" in <b>/home1/smstonet/public_html/hindi/public-sms-order.php</b> on line <b>313</b><br />
+value="Netaji Subhas Chandra Bose">नेताजी सुभास चन्द्र बोस</option><option <br />
+<b>Warning</b>:  Undefined array key "catagery" in <b>/home1/smstonet/public_html/hindi/public-sms-order.php</b> on line <b>313</b><br />
+value="Right To Recall">राईट टू रिकॉल</option>							</select>
+                           
+						 <span id="All_Categories_loader"></span>
+					</div>
+					
+					<div class="select-issue">
+						
+								
+											
+							<select id="All_subject_issue_dropdown" name="subject" onchange="selectsub(this.options[this.selectedIndex].value)">
+								<option value='-1'>सभी मुद्दे (विषय)</option>
+																
+																	<option value="Right To Recall / Replace CM Gazette Notification (Government Order)">`राईट टू रिकॉल-मुख्यमंत्री - मुख्यमंत्री को बदलने की प्रक्रिया` भारतीय राजपत्र (सरकारी आदेश)</option>
+																		<option value="Prevent Cow smuggling and slaughter">गो-धन की चोरी और हत्या को रोकना </option>
+																		<option value="Life saving Option for voters to get affidavit scan onto PM site with voter ID, so all see without log-in">जान बचने वाली एक लाइन की मांग कि कोई भी नागरिक-वोटर अपनी एफिडेविट को प्रधानमंत्री वेबसाईट पर अपने वोटर आई.डी. नंबर के साथ स्कैन करवा सकें ताकि कोई भी उसे देख सके बिना लोग-इन किये</option>
+																		<option value="Narcotest in Public by Jury approval for crimes like murder, rape, corruption, gohatya etc.">जूरी की सहमति से गो-हत्या,भ्रष्टाचार, बलात्कार, हत्या आदि अपराध में पब्लिक नार्को जांच करने के लिए भारतीय राजपत्र सूचना</option>
+																		<option value="Jury Trials for fair judgements within few days-weeks">जूरी सिस्टम (आम-नागरिकों द्वारा भ्रष्ट को सजा देने का अधिकार) - कुछ ही दिनों-हफ़्तों में न्यायपूर्ण फैसला</option>
+																		<option value="Ban EVM and Go to Ballot Paper Immediately">तुरंत चुनाव यंत्र को बैन करो और मतदान पत्र का प्रयोग हो </option>
+																		<option value="Netaji Secret files Declassification">नेताजी सुभास चन्द्र बोस की गुप्त फाइलों को सार्वजनिक करना</option>
+																		<option value="Transparent Complain Procedure (Life-saving ; Citizen-Verifiable)">पारदर्शी शिकायत-प्रस्ताव प्रणाली (नागरिक प्रमाणिक ; जान-बचाने वाली)</option>
+																		<option value="Effective Wealth Tax on Non-Agricultural Land and Construction">प्रभावशाली संपत्ति-कर गैर-कृषि भूमि और निर्माण (बिल्डिंग) पर</option>
+																		<option value="Rape and Sexual Assaults and False Complaints - Causes, FACTS and Solutions">बलात्कार और यौन उत्पीड़न (अत्याचार), झूठी शिकायतें – कारण, तथ्य और समाधान</option>
+																		<option value="Gazette Notification to make Temples management democratic via elected and recallable Community trusts">भारतीय राजपत्र जो मंदिर सञ्चालन को लोकतान्त्रिक और सशक्त बानयेगा - समुदाय ट्रस्ट द्वारा</option>
+																		<option value="Reducing, streamlining Reservations using approvals of poor dalits and reducing need of Reservation">मुख्यमंत्री/प्रधानमंत्री को नागरिकों द्वारा निर्देश कि वे भारतीय राजपत्र (सरकारी मेगजीन) में प्रक्रिया छापें जिससे गरीब दलित की सहमति से आरक्षण कम हो और आरक्षण की जरुरत कम हो</option>
+																		<option value="Stop Tax Evasion via SEZ & Mauritius route Gazette Notification">मौरिशियस मार्ग और विशेष आर्थिक जोन (SEZ) द्वारा टैक्स चोरी को रोकने के लिए भारतीय राजपत्र</option>
+																		<option value="Improve education in schools by Replace procedure over Dist. Education Officer">राईट टू रिकाल-जिला शिक्षा अधिकारी द्वारा शिक्षा में सुधार </option>
+																		<option value="Right To Recall MLA">राईट टू रिकाल-विधायक</option>
+																		<option value="ALL property (individual and trust) should be searchable by name, Voter number on net">सभी (व्यक्तिगत और ट्रस्ट) की संपत्ति नेट पर नाम, वोटर नंबर से ढूँढी जा सके</option>
+																		<option value="MP setup Public SMS Server and link with Public mobile">सांसद अपना पब्लिक एस.एम.एस. सर्वर बनाकर अपने पब्लिक मोबाइल के साथ जोड़ें</option>
+																		<option value="Reduce Poverty in few months by Mineral Royalty For Citizens and Military (MRCM)">सेना और नागरिकों के लिए खनिज आमदनी (एम.आर.सी.एम) द्वारा गरीबी कम करना कुछ ही महीनों में</option>
+																		<option value="Procedures to Improve Military, Gun training of Commons for self-defence, Ban FDI in defence">सेना में सुधार, नागरिकों की आत्म-सुरक्षा हथियार रखने और बनाने की छूट और सुरक्षा उद्योग में विदेशी प्रत्यक्ष निवेश पर प्रतिबन्ध के लिए प्रक्रिया-ड्राफ्ट</option>
+																		<option value="Cancel Local Body Taxes">स्थानीय नगर निगम टैक्स रद्द करो</option>
+																		<option value="Promote Swadeshi - 100% manufacture by Indians, Reduce wrong MNC domination">स्वदेशी - 100% भारतियों द्वारा उत्पादन बढ़ाना और अन्यायपूर्ण विदेशी कंपनियों के एकाधिकार को कम करना</option>
+																</select>
+						
+					</div>
+					
+				
+					<div align="center">
+						<input class="submit-location" type="submit"  value="सबमिट" name="submit123" />
+                       <input type="reset" value="रीसेट" onClick="window.location.href=window.location.href;">
+					</div>
+					
+					
+					
+					
+				</div>
+				
+						
+
+    
+</form>
+
+
+
+<form action="http://smstoneta.com/hindi/showbyvoter.php" method="get">
+<br>
+
+<h2 class="location-h">विभिन्न सर्च के तरीके</h2><br>
+
+<a class="location-a" href="showissue.php.html">साईट पर पंजीकृत विषय और उनके एस.एम.एस.-कोड को देखने के लिए क्लिक करें</a><br><br>
+
+
+<h3>भेजे गए पंजीकृत कोड-एस.एम.एस. को वोटर आई.डी. से ढूंढें - <br><br>
+<b>वोटर आई.डी. डालें</b><br>
+<input class="search-voterid" type="text"name="voterid"size="30"><br>
+<input type="submit"value="सबमिट" name="f">
+
+</form><br>
+	
+
+<span class="back"><a href="public-sms-order.php.html#top" class="blue">वापस ऊपर जायें</a></span>
+</div>
+
+﻿
+<div class='footer'>
+
+<p class="footer-text">
+<b><i>अस्वीकरण (नोट)</i> </b>– ये साईट केवल नागरिक-प्रामाणिक सिस्टम और कानून जैसे पब्लिक राय सर्वर (<a id="reference1" style="text-decoration: underline !important;" 
+href="https://www.facebook.com/notes/1072649809494674" target="_blank">tinyurl.com/PublicSMSserver</a>) और प्रस्तावित पारदर्शी शिकायत-प्रस्ताव प्रणाली मीडिया पोर्टल (=टी.सी.पी.=ट्रांसपेरंट कम्प्लेंट प्रोसीजर) की मांग को बढ़ावा करने के लिए है ; लिंक - चैप्टर 1, 
+<a id="reference1" style="text-decoration: underline !important;" href="http://www.prajaadhinbharat.wordpress.com"target="_blank">www.prajaadhinbharat.wordpress.com</a>) | 
+एस.एम.एस.-अभियान तरीके द्वारा परिणाम मिलेंगे या नहीं, ये कई तत्वों पर निर्भर करेगा | 
+जो व्यक्ति सांसद आदि जनसेवक के हेतु कोड-एस.एम.एस. साईट के पब्लिक नंबर को भेज रहे हैं, उनको अच्छी तरह 
+पता है कि उनके नाम, वोटर आई.डी. नंबर, उनके राज्य, जिले और विधानसभा क्षेत्र के साथ, उनका एस.एम.एस. इस 
+साईट पर दिखाया जायेगा  | साईट को किसी भी प्रकार का प्रयोग करने से पहले कृपया <a id="licence1" href="terms.php.html">शर्तें और गोपनीयता नीति</a>
+पढ़ें |<br><br>
+इस साईट का कोई भी काम या लेख सामग्री पर किसी प्रकार की कोई कॉपी-राईट नहीं है लेकिन इस पर कॉपी-लेफ्ट है 
+(ताकि दूसरे इसपर कॉपी-राईट नहीं कर सकें ) और कोई भी इस साईट पर किसी भी लेख-सामग्री को स्वतंत्र रूप से कॉपी कर सकता है, 
+परिवर्तित कर सकता है या वितरण कर सकता है | कृपया GNU लाइसेंस <a id="licence2" href="licence.html"target="_blank">यहाँ </a>देखें  |
+<br><br>
+
+<a id="reference2" style="text-decoration: underline !important;" href="http://www.sevenoutsource.com/"target="_blank">SevenOutsource</a> 
+द्वारा ये वेबसाईट बनायीं गयी और कायम रखी जाती है |
+</p>
+</div>
+
+<div class='footer mobile-view-display'>
+<ul class="mobile-footer">
+<li><span><a href="inc/disclaimer.php.html" class="footer-mobile-text">अस्वीकरण (नोट)</a></span></li><li><span><a href="terms.php.html" class="footer-mobile-text">शर्तें & गोपनीयता</a></span></li><li><span><a href="share.php.html" class="footer-mobile-text">शेयर करें</a></span></li>
+</ul>
+
+</div>
+
+
+
+</div>
+</body>
+</html>

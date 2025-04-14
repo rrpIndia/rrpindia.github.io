@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<title>Activated, unregistered mobiles - Public Opinion</title>
+
+<meta name="keywords"content="HTML,CSS,XML,XHTML,Javascript">
+<meta name="description"content="Public Opinion On Registered URLs, verifiable by any citizen sms to neta website">
+<meta name="author"content="Rajneesh Dwivedi">
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<link href="stylephp.css" rel="stylesheet" type="text/css" />
+
+<style>
+div.login_panel p {
+font-size:17px;
+line-height:27px;
+}
+@media screen and (max-width: 766px) {
+div.login_panel p {
+font-size:18px;
+line-height:29px;
+}
+}
+/** Read More **/
+
+span.displayText {
+  float: right;
+  margin-top: -25px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+span.displayText {
+color:blue;
+cursor:pointer;
+}
+.toggle-box {
+  display: none;
+}
+
+.toggle-box ~ div#foo.more-one {
+  display: none;
+}
+
+.toggle-box:checked ~ div#foo.more-one {
+  display: block;
+}
+span.displayText:before {
+
+content:"See More...";
+}
+.toggle-box:checked ~ .label1 span.displayText:before {
+
+content:"See Less";
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+<h1>smstoneta.com</h1>
+<h1> Activated, unregistered mobiles - Public Opinion on Registered URLs </h1>
+</div>
+
+<div class="login_panel">
+
+<p><strong>Disclaimer -</strong><br />
+If any person claims that their sms-opinion shown was not sent by them, then they should immediately 
+contact the admin at <strong>support@smstoneta.com</strong> and inform about this. </p><input class="toggle-box" id="header1" type="checkbox" >
+<label class="label1" for="header1"><span class="displayText"></span></label>
+<div class="more-one" id="foo">
+<p> 
+Also, they can themselves remove their displayed sms from the below data by sending cancellation code-sms 
+for an issue. The cancellation code-sms for an issue can be obtained by suffixing the URL with `*c` 
+or the last numerical of the numerical code to be replaced by `0` . <br/>
+For example, for a registered url - http://txs.io/abcd having URLid as 001, the alphabetic cancel SMS-code 
+will be http://txs.io/abcd*c and numerical cancel SMS-code will be 001*0</p>
+</div>
+<a href="index.php.html">Return to homepage</a><br><br><a href="urlcount.php.html">Return to URL Page</a><br><br><b>OPPOSE for URL :- http://tny.cz/XXX</b><b> (URL ID = 013)</b><table id='customers' class='showurl_unregistered'>
+			<tr>
+			<th>Sender</th>
+			<th>Date Time</th>
+			<th>URL Code (fully seen if reg support>25)</th>
+			
+			</tr></table>
+</div>
+</body>
+</html>

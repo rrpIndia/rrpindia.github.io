@@ -1,0 +1,2 @@
+<br />
+<b>Warning</b>:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in <b>/home1/smstonet/public_html/downloadexcel.php</b> on line <b>21</b><br />
